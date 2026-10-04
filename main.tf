@@ -12,7 +12,6 @@ provider "azurerm" {
   resource_provider_registrations = "none"
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraform-demo"
-  location = "East US"
+data "azurerm_resource_group" "rg" {
+  name = "testrg"
 }
